@@ -21,7 +21,7 @@ const Card = function () {
     <WrapperCard>
       {changecardUI ? (
         <div className="rate-card">
-          <img src="../image/logo.svg" />
+          <img src="../image/logo.png" />
           <h2>How did we do?</h2>
           <p>
             Please let us know how we did with your support request. All
