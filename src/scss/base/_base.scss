@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div:has(.wrapper-card) {
+  width: 100vw;
+  height: 100vh;
+  background: $viewport-black;
+}
+
+@font-face {
+  font-family: "Overpass";
+  src: url(../../../public/fonts/Overpass-Bold.ttf);
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+  -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+}
+
+@font-face {
+  font-family: "Overpass";
+  src: url(../../../public/fonts/Overpass-Regular.ttf);
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
+  -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+}

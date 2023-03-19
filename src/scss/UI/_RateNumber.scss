@@ -1,0 +1,26 @@
+.rate-number {
+  list-style: none;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.175px;
+  color: $medium-grey;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: $dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $white;
+    background-color: $medium-grey;
+    cursor: pointer;
+  }
+
+  @include respond(medium) {
+    font-size: 16px;
+    height: 51px;
+    width: 51px;
+  }
+}
