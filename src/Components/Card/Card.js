@@ -5,32 +5,39 @@ import WrapperCard from "../UI/WrapperCard";
 // import "./Card.scss";
 
 const rateNumbersArr = [1, 2, 3, 4, 5];
+
 const Card = function () {
   const [rateNumber, setRateNumber] = useState();
   const [changecardUI, setChangecardUI] = useState(true);
-  console.log(rateNumber);
+
   const rateNumberHandler = function (e) {
     setRateNumber(e.target.innerText);
   };
 
   const cardUIHandler = function () {
-    setChangecardUI(false);
+    rateNumber && setChangecardUI(false);
   };
 
   return (
     <WrapperCard>
       {changecardUI ? (
         <div className="rate-card">
-          <img src="../image/logo.png" />
-          <h2>How did we do?</h2>
-          <p>
+          <img
+            className="rate-card__img"
+            src="../images/logo.png"
+            alt="star logo"
+          />
+          <h2 className="rate-card__heading">How did we do?</h2>
+          <p className="rate-card__text">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
           <ul className="number-container">
             {rateNumbersArr.map((element) => (
               <RateNumber
-                className={rateNumber == element && "rate-number-active"}
+                className={
+                  Number(rateNumber) === element && "rate-number-active"
+                }
                 onClick={rateNumberHandler}
                 numbers={element}
                 key={Math.random().toString()}
@@ -43,7 +50,11 @@ const Card = function () {
         </div>
       ) : (
         <div className="rated-card">
-          <img className="rated-card__img" src="../image/rated-card.svg" />
+          <img
+            className="rated-card__img"
+            src="../images/Online-payment"
+            alt="logo"
+          />
           <p className="rated-card__result">
             You selected {rateNumber} out of {rateNumbersArr.length}
           </p>
